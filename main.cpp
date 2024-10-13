@@ -48,11 +48,30 @@ int main()
 
 void calculateGPA()
 {
-      //Enter your code here...........
-    cout<<"To implement GPA write your code here";
+//    Gpa Calculation Code 
+        int n;
+        float totalCredits = 0, totalPoints = 0;
 
-
-    cout<<"\n\n\nTotal Points: "<<" . Total Credits: "<<" .Total GPA: "<<" ."<<endl;
+        printf("Enter number of subjects: ");
+        scanf("%d", &n);
+        
+        for (int i = 0; i < n; i++) {
+                float grade, credit;
+                printf("Enter grade and credit for subject %d: ", i + 1);
+                scanf("%f %f", &grade, &credit);
+                totalPoints += grade * credit;
+                totalCredits += credit;
+        }  
+// Evaluating Gpa 
+        int Gpa =0;
+         if((totalPoints/totalCredits)>95){Gpa = 10; }
+         else if ((totalPoints/totalCredits)>85){Gpa = 9;}
+         else if ((totalPoints/totalCredits)>75){Gpa = 8;}
+         else if ((totalPoints/totalCredits)>65){Gpa = 7;}
+         else if ((totalPoints/totalCredits)>55){Gpa = 6;}
+         else {Gpa = totalPoints/totalCredits;}
+// Printing Gpa
+    cout<<"\n\n\nTotal Points: "<<totalPoints<<" . Total Credits: "<<totalCredits<<" .Total GPA: "<<Gpa<<" ."<<endl;
 
 
     sub:
@@ -85,8 +104,32 @@ void calculateCGPA()
     int l;
     cout<<"-------------- CGPA Calculating -----------------\n\n"<<endl;
     cout<<"Please implement calculate CGPA and your output should be as follows"<<endl;
+    
+        //    CGpa Calculation Code 
+                int n;
+                float totalCredits = 0, totalPoints = 0;
 
-    cout<<"******** Your CGPA is "<<"semtot/l"<<" **********"<<endl;
+                printf("Enter number of Semesters: ");
+                scanf("%d", &n);
+                for (int i = 0; i < n; i++) {
+                        float grade, credit;
+                        printf("Enter grade and credit for Semester %d: ", i + 1);
+                        scanf("%f %f", &grade, &credit);
+                        totalPoints += grade * credit;
+                        totalCredits += credit;
+                }  
+        // Evaluating CGpa 
+                int CGpa =0;
+                if((totalPoints/totalCredits)>95){CGpa = 10; }
+                else if ((totalPoints/totalCredits)>85){CGpa = 9;}
+                else if ((totalPoints/totalCredits)>75){CGpa = 8;}
+                else if ((totalPoints/totalCredits)>65){CGpa = 7;}
+                else if ((totalPoints/totalCredits)>55){CGpa = 6;}
+                else {CGpa = totalPoints/totalCredits;}
+        // Printing CGpa
+        cout<<"\n\n\n Your CGPA is : "<<CGpa<<" ."<<endl;
+
+
 
 
     sub:
