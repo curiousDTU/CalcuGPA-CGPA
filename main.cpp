@@ -66,8 +66,8 @@ void calculateGPA()
         
         for (int i = 0; i < n; i++) {
                 float grade, credit;
-                printf("Enter grade and credit for subject %d: ", i + 1);
-                scanf("%f %f", &grade, &credit);
+                cout<<"Enter grade and credit for subject: "<<(i+1)<<endl;
+                cin>>grade>>credit;
                 totalPoints += grade * credit;
                 totalCredits += credit;
         }  
@@ -118,12 +118,12 @@ void calculateCGPA()
                 int n;
                 float totalCredits = 0, totalPoints = 0;
 
-                printf("Enter number of Semesters: ");
-                scanf("%d", &n);
+                cout<<"Enter number of Semesters: "<<endl;
+                cin>>n;
                 for (int i = 0; i < n; i++) {
                         float grade, credit;
-                        printf("Enter grade and credit for Semester %d: ", i + 1);
-                        scanf("%f %f", &grade, &credit);
+                        cout<<"Enter grade and credit for Semester: "<<(i+1)<<endl;
+                        cin>>grade>>credit;
                         totalPoints += grade * credit;
                         totalCredits += credit;
                 }  
