@@ -61,8 +61,8 @@ void calculateGPA()
         int n;
         float totalCredits = 0, totalPoints = 0;
 
-        printf("Enter number of subjects: ");
-        scanf("%d", &n);
+        cout<<"Enter number of subjects: "<<endl;
+        cin>>n;
         
         for (int i = 0; i < n; i++) {
                 float grade, credit;
