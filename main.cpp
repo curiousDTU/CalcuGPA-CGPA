@@ -48,11 +48,22 @@ int main()
 
 void calculateGPA()
 {
-      //Enter your code here...........
-    cout<<"To implement GPA write your code here";
-
-
-    cout<<"\n\n\nTotal Points: "<<" . Total Credits: "<<" .Total GPA: "<<" ."<<endl;
+    int numSub;
+    float tPoints=0.0,tCredits=0.0;
+    cout<<"Enter No. of subjects: ",cin>>numSub;
+    int credit[numSub];
+    float GradePoint[numSub];
+    for(int i=0; i<numSub; i++){
+        cout << "Enter credits for subject " << i + 1 << ": ";
+        cin >> credit[i];
+        cout << "Enter grade points for subject " << i + 1 << ": ";
+        cin >> GradePoint[i];
+        tPoints +=(credit[i] * GradePoint[i]);
+        tCredits += credit[i];
+    }
+    float gpa = (tCredits == 0) ? 0 : tPoints / tCredits;
+    
+    cout<<"\n\n\nTotal Points: "<<tPoints<<" . Total Credits: "<<tCredits<<" .Total GPA: "<<gpa<<" ."<<endl;
 
 
     sub:
